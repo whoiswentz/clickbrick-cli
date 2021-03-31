@@ -1,5 +1,9 @@
-from klickbrick import __version__
+from unittest import TestCase
+
+from klickbrick import hello_cli
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+class Klickbrick(TestCase):
+    def test_get_hello_name(self):
+        string = hello_cli.process_arguments(["hello", "--name", "name"])
+        self.assertEqual(string, "hello name")

@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Vinicios Wentz <wentz.vinicios@gmail.com>"]
 
+[tool.poetry.scripts]
+klickbrick = "klickbrick.klickbrick:main"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 

@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "klickbrick"
+name = "clickbrick_cli"
 version = "0.1.0"
 description = ""
 authors = ["Vinicios Wentz <wentz.vinicios@gmail.com>"]
 
 [tool.poetry.scripts]
-klickbrick = "klickbrick.klickbrick:main"
+klickbrick = "clickbrick_cli.hello:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"

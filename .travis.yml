@@ -1,3 +1,7 @@
+language: python
+python:
+  - 3.8
+
 stages:
   - Quality
   - Publish
@@ -12,9 +16,10 @@ install:
 jobs:
   include:
     - stage: Quality
-      name: tests
+      name: "Run unit tests"
       script: python -m unittest -b
     - stage: Publish
+      name: "Publish to PiPyTest"
       script: skip
       before_deploy:
         - poetry build

@@ -28,3 +28,5 @@ jobs:
       deploy:
         provider: script
         script: poetry publish -r testpypi
+        on:
+          branch: main

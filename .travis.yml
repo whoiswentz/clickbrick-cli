@@ -16,8 +16,11 @@ install:
 jobs:
   include:
     - stage: Quality
-      name: "Run unit tests"
+      name: "Run Unit Tests"
       script: python -m unittest -b
+    - stage: Quality
+      name: "Run Behavior-Driven Tests"
+      script: behave
     - stage: Publish
       name: "Publish to PiPyTest"
       script: skip

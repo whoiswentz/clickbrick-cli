@@ -9,6 +9,7 @@ klickbrick = "clickbrick_cli.hello:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+behave = "^1.2.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

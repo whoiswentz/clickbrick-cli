@@ -14,8 +14,8 @@ def process_arguments(argv: Optional[Sequence[str]] = None) -> str:
     parser.add_argument("--name", "-n", metavar="name",
                         type=str, default="world")
     args = parser.parse_args(argv)
-    
-    return f'{args.hello} {args.name}'
+
+    return f'hello {args.name}'
 
 
 if __name__ == "__main__":

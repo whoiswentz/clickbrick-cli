@@ -10,9 +10,16 @@ def main() -> None:
 
 def process_arguments(argv: Optional[Sequence[str]] = None) -> str:
     parser = ArgumentParser(description="Klickbrick CLI")
-    parser.add_argument("hello", metavar="hello", type=str, default="")
-    parser.add_argument("--name", "-n", metavar="name",
-                        type=str, default="world")
+    subparsers = parser.add_subparsers()
+
+    hello_group = subparsers.add_parser('hello')
+    hello_group.add_argument(
+        "--name", "-n", metavar="name", type=str, default="world")
+
+    onboard_group = subparsers.add_parser('onboard')
+    onboard_group.add_argument(
+        '--test', '-t', metavar="test", type=str, default=None)
+
     args = parser.parse_args(argv)
 
     return f'hello {args.name}'
